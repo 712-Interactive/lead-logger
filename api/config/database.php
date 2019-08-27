@@ -2,7 +2,7 @@
     class Database{
 
         //Datbase Credentials
-        private $host = "34.202.165.151";
+        private $host = "lead-logger.c2mzbr5ung8u.us-east-1.rds.amazonaws.com";
         private $db_name = "lead-logger";
         private $username = "admin_712_int";
         private $password = "NeiwmuR1bgHdOCAERi2o";
