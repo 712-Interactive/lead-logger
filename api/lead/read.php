@@ -1,13 +1,13 @@
 <?php
     //required headers
-    header("Access-Control-Allow-Origin");
-    header("Content type: application/json; charset=UTF-8");
+    // header("Access-Control-Allow-Origin : *");
+    // header("Content-Type: application/json; charset=UTF-8");
 
     //database connection here
     include_once '../config/database.php';
-    include_once '../objects/product.php';
+    include_once '../objects/lead.php';
 
-    //instantiate database and product object
+    //instantiate database and lead object
     $database = new Database();
     $db = $database->getConnection();
 
@@ -32,7 +32,7 @@
             // this will make $row['name'] to
             // just $name only
 
-            extract('row');
+            extract($row);
 
             $lead_item=array(
                 "id" => $id,

@@ -1,10 +1,9 @@
 <?php
     class Database{
-
         //Datbase Credentials
-        private $host = "ec2-34-202-165-151.compute-1.amazonaws.com";
-        private $db_name = "lead-logger";
-        private $username = "ec2-user";
+        private $host = "lead-logger.c2mzbr5ung8u.us-east-1.rds.amazonaws.com";
+        private $db_name = "leadLoggerDB";
+        private $username = "admin_712_int";
         private $password = "NeiwmuR1bgHdOCAERi2o";
         public $conn;
 

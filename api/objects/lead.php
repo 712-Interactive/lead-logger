@@ -26,11 +26,11 @@
         function read(){
             //select all query
             $query = "SELECT
-                       l.id as lead_id, l.first_name, l.last_name, l.email_local, l.email_domain_id, l.phone, l.comments, l.area_coming_from, l.assigned_id, l.converted
+                       *
                         FROM
-                        " . $this->table_name . " l
+                        " . $this->table_name . "
                         ORDER BY
-                            l.id DESC
+                            id DESC
                     ";
 
             //prepare query statement
