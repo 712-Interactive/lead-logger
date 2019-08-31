@@ -67,7 +67,6 @@
                 return read();
             }else{
                 echo "Unable to create record";
-                return false;
             }
 
 

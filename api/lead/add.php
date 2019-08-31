@@ -4,9 +4,6 @@
     include_once '../config/database.php';
     include_once '../objects/lead.php';
 
-    $database = new Database();
-    $db = $database->getConnection();
-
     //instantiate database and lead object
     $database = new Database();
     $db = $database->getConnection();
