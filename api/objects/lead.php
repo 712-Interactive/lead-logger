@@ -41,4 +41,35 @@
 
             return $stmt;
         }
+
+        function add($data){
+            $insert_statement = "INSERT INTO  
+                    " . $this->table_name . "
+                    (first_name, last_name, email_local, email_domain_id, phone, comments, city, area_coming_from) 
+                    VALUES
+                    (:first_name, :last_name, :email_local, :email_domain_id, :phone, :comments, :city, :area_coming_from)";
+
+            $first_name = $data['first_name'];
+            $last_name = $data['last_name'];
+            $email_arr = explode($data['email'], "@");
+            $email_local = $email_arr[0];
+            $email_domain_id = getDomainID($email_arr[1]);
+            $phone = preg_replace('/[^A-Za-z0-9\-]/', str_replace('-','',$data['phone']));
+            $comments = $data['comments'];
+            $city = $data['city'];
+            $area_coming_from = $data['area_coming_from'];
+
+
+
+            $insert = $this->conn->prepare($insert_statement);
+            if($insert->execute()){
+                echo "New record created successfully";
+                return read();
+            }else{
+                echo "Unable to create record";
+                return false;
+            }
+
+
+        }
     }

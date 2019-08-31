@@ -10,6 +10,25 @@
 <body>
     <h1>Welcome to Lead Logger!</h1>
     <p>This is just a test page to get familiar with apache2</p>
+
+    <form action="http://ec2-34-202-165-151.compute-1.amazonaws.com/api/lead/add.php">
+        <input name="first_name" id="first_name" type="text" placeholder="Enter First Name" />
+        <br />
+        <input name="last_name" id="last_name" type="text" placeholder="Enter Last Name" />
+        <br />
+        <input name="email" id="email" type="email" placeholder="Enter Email" />
+        <br />
+        <input name="phone" id="phone" type="tel" placeholder="Enter Phone" />
+        <br />
+        <textarea name="comments" id="comments" placeholder="Enter Comments"></textarea>
+        <br />
+        <input name="city" id="city" type="text" placeholder="Enter City" />
+        <br />
+        <input name="area_coming_from" id="area_coming_from" type="text"
+            placeholder="What Area Are You Going to be Coming From?" />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
